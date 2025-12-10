@@ -1,0 +1,10 @@
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\bin\Debug\ByteStream.exe.config
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\bin\Debug\ByteStream.exe
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\bin\Debug\ByteStream.pdb
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.csproj.AssemblyReference.cache
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.Properties.Resources.resources
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.csproj.GenerateResource.cache
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.csproj.CoreCompileInputs.cache
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.exe
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.pdb
+D:\Projects\Embedded Projects\Personal\Visual Studio\ByteStream\obj\Debug\ByteStream.ByteStream.resources
