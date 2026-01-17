@@ -69,6 +69,12 @@
             this.l4RH = new System.Windows.Forms.Label();
             this.l5RH = new System.Windows.Forms.Label();
             this.lblDbg = new System.Windows.Forms.Label();
+            this.lblV3V3 = new System.Windows.Forms.Label();
+            this.l1V3V3 = new System.Windows.Forms.Label();
+            this.l2V3V3 = new System.Windows.Forms.Label();
+            this.l3V3V3 = new System.Windows.Forms.Label();
+            this.l4V3V3 = new System.Windows.Forms.Label();
+            this.l5V3V3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UARTPort
@@ -121,7 +127,7 @@
             // 
             this.lblATemp.AutoSize = true;
             this.lblATemp.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblATemp.Location = new System.Drawing.Point(248, 73);
+            this.lblATemp.Location = new System.Drawing.Point(355, 73);
             this.lblATemp.Name = "lblATemp";
             this.lblATemp.Size = new System.Drawing.Size(97, 13);
             this.lblATemp.TabIndex = 4;
@@ -131,7 +137,7 @@
             // 
             this.lblDTemp.AutoSize = true;
             this.lblDTemp.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDTemp.Location = new System.Drawing.Point(358, 73);
+            this.lblDTemp.Location = new System.Drawing.Point(465, 73);
             this.lblDTemp.Name = "lblDTemp";
             this.lblDTemp.Size = new System.Drawing.Size(103, 13);
             this.lblDTemp.TabIndex = 5;
@@ -141,7 +147,7 @@
             // 
             this.lblRH.AutoSize = true;
             this.lblRH.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRH.Location = new System.Drawing.Point(470, 73);
+            this.lblRH.Location = new System.Drawing.Point(577, 73);
             this.lblRH.Name = "lblRH";
             this.lblRH.Size = new System.Drawing.Size(85, 13);
             this.lblRH.TabIndex = 6;
@@ -181,7 +187,7 @@
             // 
             this.l1AT.AutoSize = true;
             this.l1AT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1AT.Location = new System.Drawing.Point(277, 109);
+            this.l1AT.Location = new System.Drawing.Point(384, 109);
             this.l1AT.Name = "l1AT";
             this.l1AT.Size = new System.Drawing.Size(14, 14);
             this.l1AT.TabIndex = 10;
@@ -191,7 +197,7 @@
             // 
             this.l1DT.AutoSize = true;
             this.l1DT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1DT.Location = new System.Drawing.Point(386, 109);
+            this.l1DT.Location = new System.Drawing.Point(493, 109);
             this.l1DT.Name = "l1DT";
             this.l1DT.Size = new System.Drawing.Size(14, 14);
             this.l1DT.TabIndex = 11;
@@ -201,7 +207,7 @@
             // 
             this.l1RH.AutoSize = true;
             this.l1RH.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l1RH.Location = new System.Drawing.Point(492, 109);
+            this.l1RH.Location = new System.Drawing.Point(599, 109);
             this.l1RH.Name = "l1RH";
             this.l1RH.Size = new System.Drawing.Size(14, 14);
             this.l1RH.TabIndex = 12;
@@ -336,7 +342,7 @@
             // 
             this.l2AT.AutoSize = true;
             this.l2AT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l2AT.Location = new System.Drawing.Point(277, 136);
+            this.l2AT.Location = new System.Drawing.Point(384, 136);
             this.l2AT.Name = "l2AT";
             this.l2AT.Size = new System.Drawing.Size(14, 14);
             this.l2AT.TabIndex = 25;
@@ -346,7 +352,7 @@
             // 
             this.l3AT.AutoSize = true;
             this.l3AT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l3AT.Location = new System.Drawing.Point(277, 165);
+            this.l3AT.Location = new System.Drawing.Point(384, 165);
             this.l3AT.Name = "l3AT";
             this.l3AT.Size = new System.Drawing.Size(14, 14);
             this.l3AT.TabIndex = 26;
@@ -356,7 +362,7 @@
             // 
             this.l4AT.AutoSize = true;
             this.l4AT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l4AT.Location = new System.Drawing.Point(277, 195);
+            this.l4AT.Location = new System.Drawing.Point(384, 195);
             this.l4AT.Name = "l4AT";
             this.l4AT.Size = new System.Drawing.Size(14, 14);
             this.l4AT.TabIndex = 27;
@@ -366,7 +372,7 @@
             // 
             this.l5AT.AutoSize = true;
             this.l5AT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l5AT.Location = new System.Drawing.Point(277, 224);
+            this.l5AT.Location = new System.Drawing.Point(384, 224);
             this.l5AT.Name = "l5AT";
             this.l5AT.Size = new System.Drawing.Size(14, 14);
             this.l5AT.TabIndex = 28;
@@ -376,7 +382,7 @@
             // 
             this.l2DT.AutoSize = true;
             this.l2DT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l2DT.Location = new System.Drawing.Point(386, 136);
+            this.l2DT.Location = new System.Drawing.Point(493, 136);
             this.l2DT.Name = "l2DT";
             this.l2DT.Size = new System.Drawing.Size(14, 14);
             this.l2DT.TabIndex = 29;
@@ -386,7 +392,7 @@
             // 
             this.l3DT.AutoSize = true;
             this.l3DT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l3DT.Location = new System.Drawing.Point(386, 165);
+            this.l3DT.Location = new System.Drawing.Point(493, 165);
             this.l3DT.Name = "l3DT";
             this.l3DT.Size = new System.Drawing.Size(14, 14);
             this.l3DT.TabIndex = 30;
@@ -396,7 +402,7 @@
             // 
             this.l4DT.AutoSize = true;
             this.l4DT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l4DT.Location = new System.Drawing.Point(386, 195);
+            this.l4DT.Location = new System.Drawing.Point(493, 195);
             this.l4DT.Name = "l4DT";
             this.l4DT.Size = new System.Drawing.Size(14, 14);
             this.l4DT.TabIndex = 31;
@@ -406,7 +412,7 @@
             // 
             this.l5DT.AutoSize = true;
             this.l5DT.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l5DT.Location = new System.Drawing.Point(386, 224);
+            this.l5DT.Location = new System.Drawing.Point(493, 224);
             this.l5DT.Name = "l5DT";
             this.l5DT.Size = new System.Drawing.Size(14, 14);
             this.l5DT.TabIndex = 32;
@@ -416,7 +422,7 @@
             // 
             this.l2RH.AutoSize = true;
             this.l2RH.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l2RH.Location = new System.Drawing.Point(492, 136);
+            this.l2RH.Location = new System.Drawing.Point(599, 136);
             this.l2RH.Name = "l2RH";
             this.l2RH.Size = new System.Drawing.Size(14, 14);
             this.l2RH.TabIndex = 33;
@@ -426,7 +432,7 @@
             // 
             this.l3RH.AutoSize = true;
             this.l3RH.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l3RH.Location = new System.Drawing.Point(492, 165);
+            this.l3RH.Location = new System.Drawing.Point(599, 165);
             this.l3RH.Name = "l3RH";
             this.l3RH.Size = new System.Drawing.Size(14, 14);
             this.l3RH.TabIndex = 34;
@@ -436,7 +442,7 @@
             // 
             this.l4RH.AutoSize = true;
             this.l4RH.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l4RH.Location = new System.Drawing.Point(492, 195);
+            this.l4RH.Location = new System.Drawing.Point(599, 195);
             this.l4RH.Name = "l4RH";
             this.l4RH.Size = new System.Drawing.Size(14, 14);
             this.l4RH.TabIndex = 35;
@@ -446,7 +452,7 @@
             // 
             this.l5RH.AutoSize = true;
             this.l5RH.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l5RH.Location = new System.Drawing.Point(492, 224);
+            this.l5RH.Location = new System.Drawing.Point(599, 224);
             this.l5RH.Name = "l5RH";
             this.l5RH.Size = new System.Drawing.Size(14, 14);
             this.l5RH.TabIndex = 36;
@@ -461,11 +467,72 @@
             this.lblDbg.Size = new System.Drawing.Size(0, 14);
             this.lblDbg.TabIndex = 37;
             // 
+            // lblV3V3
+            // 
+            this.lblV3V3.AutoSize = true;
+            this.lblV3V3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblV3V3.Location = new System.Drawing.Point(250, 73);
+            this.lblV3V3.Name = "lblV3V3";
+            this.lblV3V3.Size = new System.Drawing.Size(91, 13);
+            this.lblV3V3.TabIndex = 38;
+            this.lblV3V3.Text = "VDDSensor (mV)";
+            // 
+            // l1V3V3
+            // 
+            this.l1V3V3.AutoSize = true;
+            this.l1V3V3.Location = new System.Drawing.Point(278, 109);
+            this.l1V3V3.Name = "l1V3V3";
+            this.l1V3V3.Size = new System.Drawing.Size(10, 13);
+            this.l1V3V3.TabIndex = 39;
+            this.l1V3V3.Text = "-";
+            // 
+            // l2V3V3
+            // 
+            this.l2V3V3.AutoSize = true;
+            this.l2V3V3.Location = new System.Drawing.Point(278, 137);
+            this.l2V3V3.Name = "l2V3V3";
+            this.l2V3V3.Size = new System.Drawing.Size(10, 13);
+            this.l2V3V3.TabIndex = 40;
+            this.l2V3V3.Text = "-";
+            // 
+            // l3V3V3
+            // 
+            this.l3V3V3.AutoSize = true;
+            this.l3V3V3.Location = new System.Drawing.Point(278, 166);
+            this.l3V3V3.Name = "l3V3V3";
+            this.l3V3V3.Size = new System.Drawing.Size(10, 13);
+            this.l3V3V3.TabIndex = 41;
+            this.l3V3V3.Text = "-";
+            // 
+            // l4V3V3
+            // 
+            this.l4V3V3.AutoSize = true;
+            this.l4V3V3.Location = new System.Drawing.Point(278, 195);
+            this.l4V3V3.Name = "l4V3V3";
+            this.l4V3V3.Size = new System.Drawing.Size(10, 13);
+            this.l4V3V3.TabIndex = 42;
+            this.l4V3V3.Text = "-";
+            // 
+            // l5V3V3
+            // 
+            this.l5V3V3.AutoSize = true;
+            this.l5V3V3.Location = new System.Drawing.Point(278, 225);
+            this.l5V3V3.Name = "l5V3V3";
+            this.l5V3V3.Size = new System.Drawing.Size(10, 13);
+            this.l5V3V3.TabIndex = 43;
+            this.l5V3V3.Text = "-";
+            // 
             // ByteStream
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 260);
+            this.ClientSize = new System.Drawing.Size(684, 265);
+            this.Controls.Add(this.l5V3V3);
+            this.Controls.Add(this.l4V3V3);
+            this.Controls.Add(this.l3V3V3);
+            this.Controls.Add(this.l2V3V3);
+            this.Controls.Add(this.l1V3V3);
+            this.Controls.Add(this.lblV3V3);
             this.Controls.Add(this.lblDbg);
             this.Controls.Add(this.l5RH);
             this.Controls.Add(this.l4RH);
@@ -553,6 +620,12 @@
         private System.Windows.Forms.Label l4RH;
         private System.Windows.Forms.Label l5RH;
         private System.Windows.Forms.Label lblDbg;
+        private System.Windows.Forms.Label lblV3V3;
+        private System.Windows.Forms.Label l1V3V3;
+        private System.Windows.Forms.Label l2V3V3;
+        private System.Windows.Forms.Label l3V3V3;
+        private System.Windows.Forms.Label l4V3V3;
+        private System.Windows.Forms.Label l5V3V3;
     }
 }
 

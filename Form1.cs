@@ -21,6 +21,7 @@ namespace ByteStream
         byte[]   DevID = new byte[5];
         UInt32[] UpTime = new UInt32[5];
         UInt16[] Vin = new UInt16[5];
+        UInt16[] V3V3 = new UInt16[5];
         Int16[]  ATemp = new Int16[5];
         Int16[]  DTemp = new Int16[5];
         byte[]   RH = new byte[5];
@@ -128,15 +129,19 @@ namespace ByteStream
             Vin[index] <<= 8;
             Vin[index] |= RawDataBuff[6];
 
-            ATemp[index] = RawDataBuff[7];
+            V3V3[index] = RawDataBuff[7];
+            V3V3[index] <<= 8;
+            V3V3[index] |= RawDataBuff[8];
+
+            ATemp[index] = RawDataBuff[9];
             ATemp[index] <<= 8;
-            ATemp[index] |= RawDataBuff[8];
+            ATemp[index] |= RawDataBuff[10];
 
-            DTemp[index] = RawDataBuff[9];
+            DTemp[index] = RawDataBuff[11];
             DTemp[index] <<= 8;
-            DTemp[index] |= RawDataBuff[10];
+            DTemp[index] |= RawDataBuff[12];
 
-            RH[index] = RawDataBuff[11];
+            RH[index] = RawDataBuff[13];
         }
 
         private void Row_Update_Fields(byte index)
@@ -150,6 +155,7 @@ namespace ByteStream
             DevID[ToIndex] = DevID[FromIndex];
             UpTime[ToIndex] = UpTime[FromIndex];
             Vin[ToIndex] = Vin[FromIndex];
+            V3V3[ToIndex] = V3V3[FromIndex];
             ATemp[ToIndex] = ATemp[FromIndex];
             DTemp[ToIndex] = DTemp[FromIndex];
             RH[ToIndex] = RH[FromIndex];
@@ -157,31 +163,33 @@ namespace ByteStream
 
         private void Row_Update_Texts(byte index)
         {
-            string[] row1 = new string[6] ;
-            string[] row2 = new string[6];
-            string[] row3 = new string[6];
-            string[] row4 = new string[6];
-            string[] row5 = new string[6];
+            string[] row1 = new string[10] ;
+            string[] row2 = new string[10];
+            string[] row3 = new string[10];
+            string[] row4 = new string[10];
+            string[] row5 = new string[10];
 
             if (index == 0)
             {
                 row1[0] = Convert.ToString(DevID[index]);
                 row1[1] = Convert.ToString(UpTime[index]);
                 row1[2] = Convert.ToString(Vin[index]);
-                row1[3] = Convert.ToString(ATemp[index] / 10);
-                row1[3] += ".";
-                row1[3] += Convert.ToString(ATemp[index] % 10);
-                row1[4] = Convert.ToString(DTemp[index] / 10);
+                row1[3] = Convert.ToString(V3V3[index]);
+                row1[4] = Convert.ToString(ATemp[index] / 10);
                 row1[4] += ".";
-                row1[4] += Convert.ToString(DTemp[index] % 10);
-                row1[5] = Convert.ToString(RH[index]);
+                row1[4] += Convert.ToString(ATemp[index] % 10);
+                row1[5] = Convert.ToString(DTemp[index] / 10);
+                row1[5] += ".";
+                row1[5] += Convert.ToString(DTemp[index] % 10);
+                row1[6] = Convert.ToString(RH[index]);
 
                 l1ID.Text = row1[0];
                 l1UT.Text = row1[1];
                 l1Vin.Text = row1[2];
-                l1AT.Text = row1[3];
-                l1DT.Text = row1[4];
-                l1RH.Text = row1[5];
+                l1V3V3.Text = row1[3];
+                l1AT.Text = row1[4];
+                l1DT.Text = row1[5];
+                l1RH.Text = row1[6];
 
             }
             else if (index == 1)
@@ -189,80 +197,88 @@ namespace ByteStream
                 row2[0] = Convert.ToString(DevID[index]);
                 row2[1] = Convert.ToString(UpTime[index]);
                 row2[2] = Convert.ToString(Vin[index]);
-                row2[3] = Convert.ToString(ATemp[index] / 10);
-                row2[3] += ".";
-                row2[3] += Convert.ToString(ATemp[index] % 10);
-                row2[4] = Convert.ToString(DTemp[index] / 10);
+                row2[3] = Convert.ToString(V3V3[index]);
+                row2[4] = Convert.ToString(ATemp[index] / 10);
                 row2[4] += ".";
-                row2[4] += Convert.ToString(DTemp[index] % 10);
-                row2[5] = Convert.ToString(RH[index]);
+                row2[4] += Convert.ToString(ATemp[index] % 10);
+                row2[5] = Convert.ToString(DTemp[index] / 10);
+                row2[5] += ".";
+                row2[5] += Convert.ToString(DTemp[index] % 10);
+                row2[6] = Convert.ToString(RH[index]);
 
                 l2ID.Text = row2[0];
                 l2UT.Text = row2[1];
                 l2Vin.Text = row2[2];
-                l2AT.Text = row2[3];
-                l2DT.Text = row2[4];
-                l2RH.Text = row2[5];
+                l2V3V3.Text = row2[3];
+                l2AT.Text = row2[4];
+                l2DT.Text = row2[5];
+                l2RH.Text = row2[6];
             }
             else if (index == 2)
             {
                 row3[0] = Convert.ToString(DevID[index]);
                 row3[1] = Convert.ToString(UpTime[index]);
                 row3[2] = Convert.ToString(Vin[index]);
-                row3[3] = Convert.ToString(ATemp[index] / 10);
-                row3[3] += ".";
-                row3[3] += Convert.ToString(ATemp[index] % 10);
-                row3[4] = Convert.ToString(DTemp[index] / 10);
+                row3[3] = Convert.ToString(V3V3[index]);
+                row3[4] = Convert.ToString(ATemp[index] / 10);
                 row3[4] += ".";
-                row3[4] += Convert.ToString(DTemp[index] % 10);
-                row3[5] = Convert.ToString(RH[index]);
+                row3[4] += Convert.ToString(ATemp[index] % 10);
+                row3[5] = Convert.ToString(DTemp[index] / 10);
+                row3[5] += ".";
+                row3[5] += Convert.ToString(DTemp[index] % 10);
+                row3[6] = Convert.ToString(RH[index]);
 
                 l3ID.Text = row3[0];
                 l3UT.Text = row3[1];
                 l3Vin.Text = row3[2];
-                l3AT.Text = row3[3];
-                l3DT.Text = row3[4];
-                l3RH.Text = row3[5];
+                l3V3V3.Text = row3[3];
+                l3AT.Text = row3[4];
+                l3DT.Text = row3[5];
+                l3RH.Text = row3[6];
             }
             else if (index == 3)
             {
                 row4[0] = Convert.ToString(DevID[index]);
                 row4[1] = Convert.ToString(UpTime[index]);
                 row4[2] = Convert.ToString(Vin[index]);
-                row4[3] = Convert.ToString(ATemp[index] / 10);
-                row4[3] += ".";
-                row4[3] += Convert.ToString(ATemp[index] % 10);
-                row4[4] = Convert.ToString(DTemp[index] / 10);
+                row4[3] = Convert.ToString(V3V3[index]);
+                row4[4] = Convert.ToString(ATemp[index] / 10);
                 row4[4] += ".";
-                row4[4] += Convert.ToString(DTemp[index] % 10);
-                row4[5] = Convert.ToString(RH[index]);
+                row4[4] += Convert.ToString(ATemp[index] % 10);
+                row4[5] = Convert.ToString(DTemp[index] / 10);
+                row4[5] += ".";
+                row4[5] += Convert.ToString(DTemp[index] % 10);
+                row4[6] = Convert.ToString(RH[index]);
 
                 l4ID.Text = row4[0];
                 l4UT.Text = row4[1];
                 l4Vin.Text = row4[2];
-                l4AT.Text = row4[3];
-                l4DT.Text = row4[4];
-                l4RH.Text = row4[5];
+                l4V3V3.Text = row4[3];
+                l4AT.Text = row4[4];
+                l4DT.Text = row4[5];
+                l4RH.Text = row4[6];
             }
             else if (index == 4)
             {
                 row5[0] = Convert.ToString(DevID[index]);
                 row5[1] = Convert.ToString(UpTime[index]);
                 row5[2] = Convert.ToString(Vin[index]);
-                row5[3] = Convert.ToString(ATemp[index] / 10);
-                row5[3] += ".";
-                row5[3] += Convert.ToString(ATemp[index] % 10);
-                row5[4] = Convert.ToString(DTemp[index] / 10);
+                row5[3] = Convert.ToString(V3V3[index]);
+                row5[4] = Convert.ToString(ATemp[index] / 10);
                 row5[4] += ".";
-                row5[4] += Convert.ToString(DTemp[index] % 10);
-                row5[5] = Convert.ToString(RH[index]);
+                row5[4] += Convert.ToString(ATemp[index] % 10);
+                row5[5] = Convert.ToString(DTemp[index] / 10);
+                row5[5] += ".";
+                row5[5] += Convert.ToString(DTemp[index] % 10);
+                row5[6] = Convert.ToString(RH[index]);
 
                 l5ID.Text = row5[0];
                 l5UT.Text = row5[1];
                 l5Vin.Text = row5[2];
-                l5AT.Text = row5[3];
-                l5DT.Text = row5[4];
-                l5RH.Text = row5[5];
+                l5V3V3.Text = row5[3];
+                l5AT.Text = row5[4];
+                l5DT.Text = row5[5];
+                l5RH.Text = row5[6];
             }
         }
 
@@ -355,7 +371,7 @@ namespace ByteStream
 
             dbg_data += "   ";
 
-            for (byte i=0; i<14; i++)
+            for (byte i=0; i<16; i++)
             {
                 dbg_data += RawDataBuff[i].ToString("X2");
                 dbg_data += " ";
